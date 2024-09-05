@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>  <!--Define o documento como uma linguagem HTML-->
 <html lang = "pt-br">
     <head>
         <meta charset = "UTF-8">  <!--Define a coleção dos elementos brasileiros (como acentos...)-->
@@ -52,17 +52,20 @@
             </div>
         </nav>
         <header>
-            <img src = "img/project-1.jpg" width = "100%">  <!--Adiciona a imagem do helicóptero-->
-            <div class = "quadrado amarelo">
-                <img src = "img/yellow-bg.png">
+            <img class = "slide" src = "img/slidebg1.jpg" width = "100%">  <!--Adiciona a imagem do helicóptero-->
                 <div id = "slide-bar">
-                    <h4>Lean Production</h4>
-                    <div class = "seta esquerda">
+                    <div id = "txt_slide">
+                        Projeto
+                    </div>
+                    <div id = "título_slide">
+                        <h4>Lean Production</h4>
+                    </div>
+                    <div class = "seta esquerda">  <!--Quando botamos espaço, ele entende como duas classes-->
                         <a href = "#">
                             <img src = "img/arrow-left.png">
                         </a>
                     </div>
-                    <div class = "seta direita">
+                    <div class = "seta direita">  <!--Colocamos a "seta" como classe pois esse pode se repetir (diferenter dos IDs, que devem aparecer apenas uma vez no HTML, enquanto no CSS, várias)-->
                         <a href = "#">
                             <img src = "img/arrow-right.png">
                         </a>
@@ -70,5 +73,12 @@
                 </div>
             </div>
         </header>
+        <div class = "separador">
+        </div>
+        <div class ="icones">
+            <img src = "img/pencil.png">
+            <img src = "img/triangular-ruler.png">
+            <img src = "img/pencilcase.png">
+        </div>
     </body>
 </html>

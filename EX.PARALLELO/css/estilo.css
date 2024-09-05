@@ -1,19 +1,49 @@
-body {
+/*É possível verificar o próprio style ao inspecionar o site*/
+
+body {  /*Estilização do corpo do site*/
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
 nav {  /*Estilização do menu em geral*/
     margin: 0 auto;
-    position: absolute;
-    top: 15px;
+    position: absolute;  /*Permite com que algum elemento se descole do site em todo (como se estivesse flutuando). RELATIVE apenas o destaca do resto, enquanto ABSOLUTE destaca e o coloca no ponto 0 (inicial)*/
+    top: 15px;  /*Relacionado com o position ABSOLUTE e RELATIVE, funciona com um MARGIN para esses elementos*/
     width: 100%;
-    min-width: 1200px;
+    min-width: 1080px;
 }
-nav #main-menu-geral {
+nav #main-menu-geral {  /*Estilização do ID que define o menu em geral*/
     max-width: 1480px;
     height: 125px;
     margin: 0 auto;
     background-color: black;
+}
+nav ul li span {  /*Estilização*/
+    float: left;
+    color: #868686;
+    font-size: 11px;
+    margin: 58px 3px 53px 15px;
+}
+nav ul li a {  /*Estilização*/
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;  /*A fonte sempre estará em letra maiúscula*/
+    text-decoration: none;
+    padding: 53px 15px 53px 0px;
+    float: left;
+    transition: all 1s;
+}
+nav ul li a:hover {  /*Estilização*/
+    text-decoration: line-through;
+    color: rgb(231, 169, 32);
+    transition: all 1s;
+}
+nav ul li a span {  /*Estilização*/
+    font-size: 11px;
+    color: #868686; 
+    margin: 5px 3px 0 0;
+    text-decoration: none;
 }
 nav ul {  /*Estilização da lista do menu*/
     display: flex;
@@ -24,26 +54,11 @@ nav ul {  /*Estilização da lista do menu*/
 nav ul li {  /*Estilização dos elementos da lista do menu*/
     list-style: none;
     height: 125px;
-    padding: 0 25px 0 0;
+    transition: all 1s;
 }
-nav ul li span {
-    color: #868686;
-    font-size: 11px;
-    float: left;
-    margin: 58px 3px 53px 25px;
-}
-nav ul li a {
-    color: #ffffff;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 53px 25px 53px 0px;
-    float: left
-}
-nav ul li a:hover {
-    text-decoration: line-through;
-    color: rgb(231, 169, 32);
-    transition: 1s;
+nav ul li:hover {  /*Estilização*/
+    background: #444444;
+    transition: all 1s;
 }
 nav #logo img {  /*Estilização da imagem de logo do menu*/
     height: 75px;
@@ -53,13 +68,58 @@ nav #logo img {  /*Estilização da imagem de logo do menu*/
 nav #main-menu {  /*Estilização da imagem do menu*/
     float: right;
 }
-.montserrat, nav ul li a {
+.montserrat, nav ul li a {  /*Estilização*/
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-header img {
+header {  /*Até antes de mexermos no header, quem estava definindo o tamanho do cabeçalho era a própria imagem*/
     width: 100%;
     height: 600px;
+}
+header .slide {  /*Estilização*/
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+header #slide-bar {  /*Estilização*/
+    margin-top: 320px;
+    height: 280px;
+    float: left;
+    background-image: url(../img/yellow-bg.png);
+    width: 625px;
+    padding: 0 0 0 60px;
+}
+header #txt_slide {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+    color: white;
+    text-transform: uppercase;
+}
+header #título_slide {
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+header #título_slide h4 {  /*Poderia ser só h4*/
+    margin: 30px 0;
+}
+header .seta {
+    float: left;
+}
+header .direita {
+    margin-left: 20px;
+}
+.separador {
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/divider-dark.png);
+    background-repeat: repeat-x;
+}
+.icones {
+    size: 20px;
 }
